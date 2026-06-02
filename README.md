@@ -9,6 +9,10 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org)
 [![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
 
+<p align="center">
+  <img src="media/hero.svg" alt="Forms Hub Architecture" width="100%">
+</p>
+
 ---
 
 ## Architecture
