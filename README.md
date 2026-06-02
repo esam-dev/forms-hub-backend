@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
 
 <p align="center">
-  <img src="media/hero.svg" alt="Forms Hub Architecture" width="100%">
+  <img src="media/hero.svg" alt="Forms Hub Architecture" width="85%">
 </p>
 
 ---
@@ -230,12 +230,12 @@ GET /api/v1/health
 
 | Module | Branch | Description | Status |
 |--------|--------|-------------|--------|
-| 1 | `feature/database-setup` | Node/TS init, PostgreSQL, Prisma schema & migration | ✅ Complete |
-| 2 | `feature/server-architecture` | Express server, CORS, error handling, health check | ✅ Complete |
-| 3 | `feature/submissions-api` | POST /api/v1/submissions with API key validation | 🔜 Planned |
-| 4 | `feature/auth-dashboard` | Auth system (register/login, bcrypt, JWT) | 🔜 Planned |
-| 5 | `feature/dashboard-api` | Private CRUD for projects & submissions | 🔜 Planned |
-| 6 | `feature/production-deploy` | Build optimization, cloud deployment, docs | 🔜 Planned |
+| 1 | `feature/database-setup` | Node/TS init, PostgreSQL, Prisma schema & migration | `✓` Complete |
+| 2 | `feature/server-architecture` | Express server, CORS, error handling, health check | `✓` Complete |
+| 3 | `feature/submissions-api` | POST /api/v1/submissions with API key validation | `○` Planned |
+| 4 | `feature/auth-dashboard` | Auth system (register/login, bcrypt, JWT) | `○` Planned |
+| 5 | `feature/dashboard-api` | Private CRUD for projects & submissions | `○` Planned |
+| 6 | `feature/production-deploy` | Build optimization, cloud deployment, docs | `○` Planned |
 
 Full details in [`ROAMAD.md`](ROAMAD.md).
 
