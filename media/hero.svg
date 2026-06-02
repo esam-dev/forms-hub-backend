@@ -1,180 +1,232 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="'SF Pro Display', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#0b0f19;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accentGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="lineGradV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="pillBlue" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1"/>
       <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="pillGreen" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#10b981;stop-opacity:1"/>
       <stop offset="100%" style="stop-color:#059669;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="pillAmber" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1"/>
       <stop offset="100%" style="stop-color:#d97706;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1"/>
-    </linearGradient>
-    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="pillPurple" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1"/>
       <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+    <linearGradient id="glowPurple" x1="50%" y1="50%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="shadowCard">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="shadowGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    <filter id="logoGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa"/>
-    </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/>
-    </marker>
-    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    <marker id="arrowFlow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6366f1"/>
     </marker>
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="400" fill="url(#bgGrad)" rx="16"/>
+  <rect width="1200" height="500" fill="url(#bgGrad)"/>
 
-  <!-- Grid pattern overlay -->
-  <g opacity="0.03">
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="1"/>
-    </pattern>
-    <rect width="1200" height="400" fill="url(#grid)"/>
+  <!-- Subtle radial glow behind logo -->
+  <ellipse cx="600" cy="110" rx="300" ry="80" fill="url(#glowPurple)"/>
+
+  <!-- Top decorative line -->
+  <rect x="0" y="0" width="1200" height="1" fill="url(#lineGrad)"/>
+
+  <!-- ============ HERO SECTION ============ -->
+
+  <!-- Icon / Logo -->
+  <g transform="translate(600, 105)" filter="url(#logoGlow)">
+    <!-- Hexagon background -->
+    <polygon points="0,-32 27.7,-16 27.7,16 0,32 -27.7,16 -27.7,-16" fill="none" stroke="url(#accentGrad)" stroke-width="2.5"/>
+    <!-- Inner F letter -->
+    <text x="0" y="8" text-anchor="middle" fill="url(#accentGrad2)" font-size="24" font-weight="800">F</text>
+    <!-- Small accent dot -->
+    <circle cx="16" cy="-12" r="3" fill="#a78bfa" opacity="0.7"/>
   </g>
 
   <!-- Title -->
-  <text x="600" y="55" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700" letter-spacing="1">Forms Hub</text>
-  <text x="600" y="80" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="400" letter-spacing="0.5">Centralized Multitenant Form Submission Backend</text>
+  <text x="600" y="165" text-anchor="middle" fill="#f8fafc" font-size="36" font-weight="800" letter-spacing="-0.5">Forms Hub</text>
 
-  <!-- Divider -->
-  <line x1="200" y1="95" x2="1000" y2="95" stroke="#334155" stroke-width="1"/>
+  <!-- Tagline -->
+  <text x="600" y="195" text-anchor="middle" fill="#64748b" font-size="15" font-weight="400" letter-spacing="0.3">Centralized Multitenant Form Submission Backend</text>
 
-  <!-- ============ LANDING PAGES (LEFT) ============ -->
+  <!-- Badge row -->
+  <g transform="translate(600, 225)">
+    <rect x="-100" y="-12" width="65" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+    <text x="-67" y="4" text-anchor="middle" fill="#818cf8" font-size="10" font-weight="600">TypeScript</text>
 
-  <!-- LP 1 -->
-  <rect x="40" y="140" width="180" height="90" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="40" y="140" width="180" height="4" rx="2" fill="url(#cardGrad1)"/>
-  <text x="130" y="175" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="600">LANDING PAGE</text>
-  <text x="130" y="195" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="700">Mi Portfolio</text>
-  <text x="130" y="215" text-anchor="middle" fill="#64748b" font-size="10">Contact Form</text>
+    <rect x="-30" y="-12" width="55" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+    <text x="-2" y="4" text-anchor="middle" fill="#34d399" font-size="10" font-weight="600">Express</text>
 
-  <!-- LP 2 -->
-  <rect x="40" y="250" width="180" height="90" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="40" y="250" width="180" height="4" rx="2" fill="url(#cardGrad2)"/>
-  <text x="130" y="285" text-anchor="middle" fill="#34d399" font-size="12" font-weight="600">LANDING PAGE</text>
-  <text x="130" y="305" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="700">Navixsoft</text>
-  <text x="130" y="325" text-anchor="middle" fill="#64748b" font-size="10">Quote Request</text>
+    <rect x="30" y="-12" width="50" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+    <text x="55" y="4" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="600">Prisma</text>
 
-  <!-- LP 3 -->
-  <rect x="40" y="115" width="0" height="0" rx="0" fill="none"/>
-  <text x="130" y="368" text-anchor="middle" fill="#475569" font-size="11" font-weight="400">+ more landing pages</text>
+    <rect x="85" y="-12" width="70" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+    <text x="120" y="4" text-anchor="middle" fill="#60a5fa" font-size="10" font-weight="600">PostgreSQL</text>
+  </g>
 
-  <!-- ============ ARROWS LP → API ============ -->
-  <line x1="225" y1="185" x2="365" y2="230" stroke="#60a5fa" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowBlue)" opacity="0.8"/>
-  <line x1="225" y1="295" x2="365" y2="250" stroke="#34d399" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowGreen)" opacity="0.8"/>
+  <!-- ============ DIVIDER ============ -->
+  <line x1="250" y1="270" x2="950" y2="270" stroke="url(#lineGrad)" stroke-width="1"/>
 
-  <!-- API Key label on arrows -->
-  <text x="280" y="195" fill="#60a5fa" font-size="9" font-weight="500" transform="rotate(-20, 280, 195)">x-api-key</text>
-  <text x="280" y="278" fill="#34d399" font-size="9" font-weight="500" transform="rotate(20, 280, 278)">x-api-key</text>
+  <!-- ============ FLOW DIAGRAM ============ -->
 
-  <!-- ============ CENTRAL API ============ -->
-  <rect x="370" y="155" width="240" height="170" rx="16" fill="#1e293b" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="370" y="155" width="240" height="6" rx="3" fill="url(#centerGrad)"/>
+  <!-- Source label -->
+  <text x="170" y="300" text-anchor="middle" fill="#475569" font-size="10" font-weight="600" letter-spacing="1">ORIGIN</text>
 
-  <!-- Server icon -->
-  <circle cx="490" cy="195" r="18" fill="#4f46e5" opacity="0.2"/>
-  <text x="490" y="200" text-anchor="middle" fill="#a5b4fc" font-size="16">⚡</text>
+  <!-- Landing Pages stacked -->
+  <g filter="url(#shadowCard)">
+    <rect x="55" y="315" width="230" height="44" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
+    <rect x="55" y="315" width="4" height="44" rx="2" fill="url(#pillBlue)"/>
+    <circle cx="80" cy="337" r="10" fill="#1e3a5f"/>
+    <text x="80" y="341" text-anchor="middle" fill="#60a5fa" font-size="11">🌐</text>
+    <text x="98" y="333" fill="#e2e8f0" font-size="13" font-weight="600">Landing Page A</text>
+    <text x="98" y="350" fill="#64748b" font-size="10">portfolio.example.com</text>
+  </g>
 
-  <text x="490" y="230" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="700">Express Server</text>
-  <text x="490" y="248" text-anchor="middle" fill="#94a3b8" font-size="11">REST API v1</text>
+  <g filter="url(#shadowCard)">
+    <rect x="55" y="367" width="230" height="44" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
+    <rect x="55" y="367" width="4" height="44" rx="2" fill="url(#pillGreen)"/>
+    <circle cx="80" cy="389" r="10" fill="#064e3b"/>
+    <text x="80" y="393" text-anchor="middle" fill="#34d399" font-size="11">🌐</text>
+    <text x="98" y="385" fill="#e2e8f0" font-size="13" font-weight="600">Landing Page B</text>
+    <text x="98" y="402" fill="#64748b" font-size="10">navixsoft.com</text>
+  </g>
 
-  <line x1="390" y1="260" x2="590" y2="260" stroke="#334155" stroke-width="1"/>
+  <g filter="url(#shadowCard)">
+    <rect x="55" y="419" width="230" height="44" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
+    <rect x="55" y="419" width="4" height="44" rx="2" fill="url(#pillAmber)"/>
+    <circle cx="80" cy="441" r="10" fill="#422006"/>
+    <text x="80" y="445" text-anchor="middle" fill="#fbbf24" font-size="11">+</text>
+    <text x="98" y="437" fill="#e2e8f0" font-size="13" font-weight="600">More landing pages</text>
+    <text x="98" y="454" fill="#64748b" font-size="10">+x more</text>
+  </g>
 
-  <!-- Middleware badges -->
-  <rect x="385" y="270" width="70" height="20" rx="10" fill="#334155" stroke="#475569" stroke-width="0.5"/>
-  <text x="420" y="283" text-anchor="middle" fill="#94a3b8" font-size="8" font-weight="500">CORS</text>
+  <!-- Arrow line from origins to API -->
+  <line x1="290" y1="337" x2="520" y2="337" stroke="#6366f1" stroke-width="2" stroke-dasharray="6,4" opacity="0.6" marker-end="url(#arrowFlow)"/>
+  <line x1="290" y1="389" x2="520" y2="389" stroke="#6366f1" stroke-width="2" stroke-dasharray="6,4" opacity="0.6" marker-end="url(#arrowFlow)"/>
+  <line x1="290" y1="441" x2="520" y2="441" stroke="#6366f1" stroke-width="2" stroke-dasharray="6,4" opacity="0.6" marker-end="url(#arrowFlow)"/>
 
-  <rect x="465" y="270" width="70" height="20" rx="10" fill="#334155" stroke="#475569" stroke-width="0.5"/>
-  <text x="500" y="283" text-anchor="middle" fill="#94a3b8" font-size="8" font-weight="500">JSON</text>
+  <!-- API Key label on arrow -->
+  <rect x="365" y="325" width="80" height="18" rx="9" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.5" opacity="0.9"/>
+  <text x="405" y="337" text-anchor="middle" fill="#a5b4fc" font-size="9" font-weight="600">x-api-key</text>
 
-  <rect x="545" y="270" width="50" height="20" rx="10" fill="#334155" stroke="#475569" stroke-width="0.5"/>
-  <text x="570" y="283" text-anchor="middle" fill="#94a3b8" font-size="8" font-weight="500">Auth</text>
+  <!-- Central box: Forms Hub API -->
+  <text x="455" y="300" text-anchor="middle" fill="#475569" font-size="10" font-weight="600" letter-spacing="1">API</text>
 
-  <rect x="385" y="296" width="210" height="20" rx="10" fill="#334155" stroke="#475569" stroke-width="0.5"/>
-  <text x="490" y="309" text-anchor="middle" fill="#94a3b8" font-size="8" font-weight="500">Error Handler</text>
+  <g filter="url(#shadowCard)">
+    <rect x="340" y="312" width="230" height="165" rx="14" fill="#131829" stroke="#2d2b55" stroke-width="1.5"/>
 
-  <!-- ============ ARROW API → DB ============ -->
-  <line x1="615" y1="240" x2="745" y2="240" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#arrowPurple)" opacity="0.9"/>
+    <!-- Header bar -->
+    <rect x="340" y="312" width="230" height="42" rx="14" fill="#1c1a3e"/>
+    <rect x="340" y="340" width="230" height="14" fill="#1c1a3e"/>
 
-  <!-- Prisma label -->
-  <rect x="640" y="210" width="80" height="18" rx="9" fill="#2d3748" stroke="#a78bfa" stroke-width="0.5"/>
-  <text x="680" y="223" text-anchor="middle" fill="#c4b5fd" font-size="9" font-weight="600">Prisma ORM</text>
+    <!-- Status dot -->
+    <circle cx="362" cy="333" r="5" fill="#10b981"/>
+    <circle cx="362" cy="333" r="5" fill="#10b981" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="375" y="337" fill="#e2e8f0" font-size="13" font-weight="700">Forms Hub API</text>
+    <text x="530" y="337" text-anchor="end" fill="#475569" font-size="9">v1</text>
 
-  <!-- ============ DATABASE (RIGHT) ============ -->
-  <rect x="750" y="120" width="230" height="240" rx="16" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="750" y="120" width="230" height="6" rx="3" fill="url(#dbGrad)"/>
+    <!-- Middleware list -->
+    <rect x="355" y="362" width="200" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+    <text x="455" y="378" text-anchor="middle" fill="#94a3b8" font-size="10">CORS · JSON Parser</text>
 
-  <!-- DB icon -->
-  <circle cx="865" cy="160" r="18" fill="#7c3aed" opacity="0.2"/>
-  <text x="865" y="165" text-anchor="middle" fill="#c4b5fd" font-size="16">🗄️</text>
+    <rect x="355" y="392" width="200" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+    <text x="455" y="408" text-anchor="middle" fill="#94a3b8" font-size="10">API Key Validation</text>
 
-  <text x="865" y="190" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="700">PostgreSQL</text>
-  <text x="865" y="206" text-anchor="middle" fill="#94a3b8" font-size="10">JSONB Payload</text>
+    <rect x="355" y="422" width="200" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+    <text x="455" y="438" text-anchor="middle" fill="#94a3b8" font-size="10">Error Handler</text>
 
-  <line x1="770" y1="218" x2="960" y2="218" stroke="#334155" stroke-width="1"/>
+    <!-- Lock icon -->
+    <rect x="530" y="420" width="28" height="28" rx="8" fill="#2d2b55"/>
+    <text x="544" y="439" text-anchor="middle" fill="#a5b4fc" font-size="12">🔒</text>
+  </g>
 
-  <!-- Table Users -->
-  <rect x="765" y="228" width="200" height="38" rx="8" fill="#2d3748" stroke="#475569" stroke-width="0.5"/>
-  <rect x="765" y="228" width="4" height="38" rx="2" fill="#3b82f6"/>
-  <text x="865" y="245" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="600">Users</text>
-  <text x="865" y="258" text-anchor="middle" fill="#64748b" font-size="9">id · email · passwordHash</text>
+  <!-- Arrow from API to DB -->
+  <line x1="575" y1="395" x2="740" y2="395" stroke="#8b5cf6" stroke-width="2.5" opacity="0.8" marker-end="url(#arrowFlow)"/>
 
-  <!-- Arrow Users → Projects -->
-  <line x1="865" y1="266" x2="865" y2="276" stroke="#475569" stroke-width="1.5"/>
-  <polygon points="861,274 865,280 869,274" fill="#475569"/>
+  <!-- Prisma label on arrow -->
+  <rect x="620" y="380" width="75" height="18" rx="9" fill="#1a1a2e" stroke="#8b5cf6" stroke-width="0.5"/>
+  <text x="657" y="392" text-anchor="middle" fill="#c4b5fd" font-size="9" font-weight="600">Prisma ORM</text>
 
-  <!-- Table Projects -->
-  <rect x="765" y="278" width="200" height="38" rx="8" fill="#2d3748" stroke="#475569" stroke-width="0.5"/>
-  <rect x="765" y="278" width="4" height="38" rx="2" fill="#10b981"/>
-  <text x="865" y="295" text-anchor="middle" fill="#34d399" font-size="11" font-weight="600">Projects</text>
-  <text x="865" y="308" text-anchor="middle" fill="#64748b" font-size="9">id · name · apiKey · userId</text>
+  <!-- Database -->
+  <text x="835" y="300" text-anchor="middle" fill="#475569" font-size="10" font-weight="600" letter-spacing="1">STORAGE</text>
 
-  <!-- Arrow Projects → Submissions -->
-  <line x1="865" y1="316" x2="865" y2="326" stroke="#475569" stroke-width="1.5"/>
-  <polygon points="861,324 865,330 869,324" fill="#475569"/>
+  <g filter="url(#shadowCard)">
+    <rect x="740" y="315" width="190" height="165" rx="14" fill="#131829" stroke="#2d2b55" stroke-width="1.5"/>
 
-  <!-- Table FormSubmissions -->
-  <rect x="765" y="328" width="200" height="38" rx="8" fill="#2d3748" stroke="#475569" stroke-width="0.5"/>
-  <rect x="765" y="328" width="4" height="38" rx="2" fill="#f59e0b"/>
-  <text x="865" y="345" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600">FormSubmissions</text>
-  <text x="865" y="358" text-anchor="middle" fill="#64748b" font-size="9">id · formName · payload (JSONB)</text>
+    <!-- DB icon circle -->
+    <circle cx="835" cy="345" r="16" fill="#2e1065"/>
+    <text x="835" y="350" text-anchor="middle" fill="#a78bfa" font-size="14">🗄️</text>
 
-  <!-- ============ RELATIONSHIP LABELS ============ -->
-  <text x="720" y="290" text-anchor="middle" fill="#475569" font-size="9">1:N</text>
-  <text x="720" y="340" text-anchor="middle" fill="#475569" font-size="9">1:N</text>
+    <text x="835" y="375" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="700">PostgreSQL</text>
+    <text x="835" y="390" text-anchor="middle" fill="#64748b" font-size="10">JSONB Storage</text>
 
-  <!-- ============ BOTTOM TAGLINE ============ -->
-  <line x1="200" y1="385" x2="1000" y2="385" stroke="#334155" stroke-width="1"/>
-  <text x="600" y="395" text-anchor="middle" fill="#475569" font-size="11" font-weight="400">TypeScript · Express 5 · Prisma · PostgreSQL</text>
+    <!-- Tables -->
+    <line x1="755" y1="400" x2="915" y2="400" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- Decorative dots -->
-  <circle cx="1100" cy="50" r="3" fill="#3b82f6" opacity="0.3"/>
-  <circle cx="1120" cy="65" r="2" fill="#10b981" opacity="0.3"/>
-  <circle cx="1080" cy="70" r="2" fill="#f59e0b" opacity="0.3"/>
-  <circle cx="50" cy="40" r="2" fill="#6366f1" opacity="0.3"/>
-  <circle cx="70" cy="30" r="3" fill="#8b5cf6" opacity="0.3"/>
+    <rect x="755" y="408" width="160" height="20" rx="5" fill="#1e293b"/>
+    <circle cx="768" cy="418" r="3" fill="#3b82f6"/>
+    <text x="778" y="422" fill="#94a3b8" font-size="10">Users</text>
+    <text x="900" y="422" text-anchor="end" fill="#475569" font-size="8">1</text>
+
+    <rect x="755" y="432" width="160" height="20" rx="5" fill="#1e293b"/>
+    <circle cx="768" cy="442" r="3" fill="#10b981"/>
+    <text x="778" y="446" fill="#94a3b8" font-size="10">Projects</text>
+    <text x="900" y="446" text-anchor="end" fill="#475569" font-size="8">N</text>
+
+    <rect x="755" y="456" width="160" height="20" rx="5" fill="#1e293b"/>
+    <circle cx="768" cy="466" r="3" fill="#f59e0b"/>
+    <text x="778" y="470" fill="#94a3b8" font-size="10">FormSubmissions</text>
+    <text x="900" y="470" text-anchor="end" fill="#475569" font-size="8">N</text>
+  </g>
+
+  <!-- Bottom decorative line -->
+  <rect x="0" y="499" width="1200" height="1" fill="url(#lineGrad)"/>
 </svg>
