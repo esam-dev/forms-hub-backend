@@ -161,6 +161,48 @@ curl http://localhost:3000/api/v1/health
 
 ---
 
+## Deployment
+
+### Railway (recommended)
+
+This project is designed to deploy on [Railway](https://railway.app). Your Railway PostgreSQL instance is already provisioned.
+
+#### One-click deploy
+
+1. Push the repo to GitHub and connect it to Railway.
+2. Add a **PostgreSQL** plugin (if not already added).
+3. Set the following **Environment Variables** in Railway:
+
+| Variable | How to set |
+|----------|------------|
+| `DATABASE_URL` | Railway auto-injects this from the PostgreSQL plugin |
+| `JWT_SECRET` | Generate with `openssl rand -hex 64` and set manually |
+| `JWT_EXPIRES_IN` | `7d` (or your preference) |
+| `CORS_ORIGINS` | Comma-separated list of your frontend domain(s) |
+| `NODE_ENV` | `production` |
+
+4. Set **Build Command**: `npm run build`
+5. Set **Start Command**: `npx prisma migrate deploy && node dist/index.js`
+6. Deploy.
+
+### Local testing with Docker
+
+```bash
+cp .env.example .env
+# Fill in DATABASE_URL with your Railway PostgreSQL connection string
+# Set JWT_SECRET, CORS_ORIGINS, etc.
+docker compose up -d
+```
+
+### Production Checklist
+
+- [ ] Generate a strong `JWT_SECRET`: `openssl rand -hex 64`
+- [ ] Set `NODE_ENV=production`
+- [ ] Set `CORS_ORIGINS` to your actual frontend domain(s)
+- [ ] Review and rotate secrets regularly
+
+---
+
 ## Project Structure
 
 ```
