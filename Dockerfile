@@ -6,6 +6,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev && npm ci
 
+COPY prisma.config.ts ./
 COPY prisma/ ./prisma/
 RUN npx prisma generate
 
@@ -25,6 +26,7 @@ RUN npm ci --omit=dev --ignore-scripts
 
 COPY --from=builder /app/node_modules/.prisma /app/node_modules/.prisma
 COPY --from=builder /app/prisma ./prisma
+COPY prisma.config.ts ./
 COPY --from=builder /app/dist ./dist
 
 COPY entrypoint.sh /entrypoint.sh
